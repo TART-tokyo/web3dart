@@ -104,7 +104,7 @@ class TransactionReceipt {
 
   TransactionReceipt.fromJson(Map<String, dynamic> map)
       : transactionHash = hexToBytes(map['transactionHash'] as String),
-        transactionIndex = hexToDartInt(map['transactionIndex'] as String),
+        transactionIndex = 1, //hexToDartInt(map['transactionIndex'] as String),
         blockHash = hexToBytes(map['blockHash'] as String),
         blockNumber = map['blockNumber'] != null
             ? BlockNum.exact(int.parse(map['blockNumber'] as String))
